@@ -1,0 +1,42 @@
+CREATE TABLE teams (
+  id SERIAL PRIMARY KEY NOT NULL,
+  abrv VARCHAR(3) UNIQUE NOT NULL,
+  city VARCHAR DEFAULT NULL,
+  name VARCHAR DEFAULT NULL
+);
+
+INSERT INTO teams (abrv, city, name)
+VALUES ('ARI', 'Cardinals', 'Arizona'),
+  ('ATL', 'Falcons', 'Atlanta'),
+  ('BAL', 'Ravens', 'Baltimore'),
+  ('BUF', 'Bills', 'Buffalo'),
+  ('CAR', 'Panthers', 'Carolina'),
+  ('CHI', 'Bears', 'Chicago'),
+  ('CIN', 'Bengals', 'Cincinnati'),
+  ('CLE', 'Browns', 'Cleveland'),
+  ('DAL', 'Cowboys', 'Dallas'),
+  ('DEN', 'Broncos', 'Denver'),
+  ('DET', 'Lions', 'Detroit'),
+  ('GB', 'Packers', 'Green Bay'),
+  ('HOU', 'Texans', 'Houston'),
+  ('IND', 'Colts', 'Indianapolis'),
+  ('JAX', 'Jaguars', 'Jacksonville'),
+  ('KC', 'Chiefs', 'Kansas City'),
+  ('LAC', 'Chargers', 'Los Angeles'),
+  ('LAR', 'Rams', 'Los Angeles'),
+  ('MIA', 'Dolphins', 'Miami'),
+  ('MIN', 'Vikings', 'Minnesota'),
+  ('NE', 'Patriots', 'New England'),
+  ('NO', 'Saints', 'New Orleans'),
+  ('NYG', 'Giants', 'New York'),
+  ('NYJ', 'Jets', 'New York'),
+  ('OAK', 'Raiders', 'Oakland'),
+  ('PHI', 'Eagles', 'Philadelphia'),
+  ('PIT', 'Steelers', 'Pittsburgh'),
+  ('SEA', '49ers', 'San Francisco'),
+  ('SF', 'Seahawks', 'Seattle'),
+  ('TB', 'Buccaneers', 'Tampa Bay'),
+  ('TEN', 'Titans', 'Tennessee'),
+  ('WAS', 'Redskins', 'Washington');
+
+DROP TABLE teams;

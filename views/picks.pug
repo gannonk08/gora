@@ -1,0 +1,26 @@
+extends layout
+include partials/schedules
+block content
+    h1 NFL TEAMS
+    hr
+    .row
+        .col-md-6
+            .row
+                .col-md-4
+                    label(for='teams' class='col-form-label') Teams
+                .col-md-2
+                .col-md-6
+                    form(action='/teams/pick' method="post")
+                        select(name='team', id='teams' )
+                            each team in teams
+                                option=team
+                        select(name='week', id='week')
+                            each week in weeks
+                                option=week
+                            input(type='hidden', name='_csrf', value=_csrf)
+                            input(type='submit', value='Submit' class="btn btn-danger dropdown-toggle")
+                hr
+        .col-md-6
+            +schedule-include(schedule)
+            script(src='/js/lib/jquery.min.js')
+            script(src='/js/scripts/scheduleHandler.js')

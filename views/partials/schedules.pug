@@ -1,0 +1,17 @@
+mixin schedule-include(schedule)
+    table(style='width:100%', border='1' class="table table-striped")
+        thead
+            tr
+                th Day
+                th Date
+                th Time (ET)
+                th Home
+                th Away
+        tbody
+            each game in schedule.games
+                tr
+                    td=game.day
+                    td=game.date
+                    td=game.time
+                    td=game.homeFullName
+                    td=game.awayFullName
